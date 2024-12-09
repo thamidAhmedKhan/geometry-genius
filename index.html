@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOMETRY-GENIUS</title>
+    <!-- daisyui & tailwindcss -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-4">
+    <header>
+        <div
+            class="flex flex-wrap gap-5 justify-between px-12 py-5 font-bold rounded-lg bg-sky-600 bg-opacity-10 max-md:px-5 max-md:max-w-full">
+            <div class="flex flex-col ">
+                <h1 class="text-3xl xl:text-5xl text-neutral-900 max-md:text-2xl">
+                    Interactive
+                </h1>
+                <span class="lg:text-lg xl:text-3xl font-medium tracking-widest text-neutral-900 text-opacity-80">
+                    Geometry Genius
+                </span>
+            </div>
+            <button class="px-10 py-2.5 my-auto text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                aria-label="Open Blog">
+                Blog
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- main content continer -->
+        <div class="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 mt-12 max-md:mt-10">
+            <!-- shape card container -->
+            <div class="col-span-3 max-md:grid-cols-2 max-sm:grid-cols-1 grid grid-cols-3 gap-4">
+                <!-- card-1 Triangle -->
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <div class="flex flex-col w-full max-md:ml-0 max-md:w-full">
+                            <form
+                                class="flex flex-col items-center px-11 py-12 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
+                                <img loading="lazy" src="Assets/images/triangle.png" alt="Triangle shape illustration"
+                                    class="object-contain max-w-full aspect-[1.25] w-[243px]" />
+                                <h2 class="mt-12 text-2xl max-md:mt-10">Triangle</h2>
+                                <div class="flex gap-2 mt-2.5 max-w-full">
+                                    Area (A) = 0.5 <span class="text-neutral-600 font-extralight">X</span>b <span
+                                        class="text-neutral-600 font-extralight">X</span>h
+                                </div>
+                                <div class="flex gap-2.5 mt-6 max-w-full whitespace-nowrap w-[269px]">
+
+                                    <div>
+                                        <label for="base" class="sr-only">Base length in cm</label>
+                                        <input type="number" id="base"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Base length" placeholder="b" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+                                    <div>
+                                        <label for="height" class="sr-only">Height in cm</label>
+                                        <input type="number" id="height"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Height" placeholder="h" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+
+                                </div>
+                                <button type="submit"
+                                    class="self-stretch px-16 py-4 mt-12 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5 max-md:mt-10">
+                                    Calculate
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- area calculation container -->
+                    <div>
+
+                    </div>
+                </div>
+                <!-- card-2 Rectangle-->
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <div class="flex flex-col w-full max-md:ml-0 max-md:w-full">
+                            <form
+                                class="flex flex-col items-center px-11 py-12 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
+                                <img loading="lazy" src="Assets/images/rectangle.png" alt="Triangle shape illustration"
+                                    class="object-contain max-w-full aspect-[1.25] w-[243px]" />
+                                <h2 class="mt-12 text-2xl max-md:mt-10">Rectangle</h2>
+                                <div class="flex gap-2 mt-2.5 max-w-full">
+                                    Area (A) = W <span class="text-neutral-600 font-extralight">X</span>l
+                                </div>
+                                <div class="flex gap-2.5 mt-6 max-w-full whitespace-nowrap w-[269px]">
+
+                                    <div>
+                                        <label for="base" class="sr-only">Base length in cm</label>
+                                        <input type="number" id="base"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Base length" placeholder="W" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+                                    <div>
+                                        <label for="height" class="sr-only">Height in cm</label>
+                                        <input type="number" id="height"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Height" placeholder="l" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+
+                                </div>
+                                <button type="submit"
+                                    class="self-stretch px-16 py-4 mt-12 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5 max-md:mt-10">
+                                    Calculate
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- area calculation container -->
+                    <div>
+
+                    </div>
+                </div>
+                <!-- card-3 Parallelogram-->
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <div class="flex flex-col w-full max-md:ml-0 max-md:w-full">
+                            <form
+                                class="flex flex-col items-center px-11 py-12 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
+                                <img loading="lazy" src="Assets/images/parallelogram.png"
+                                    alt="Triangle shape illustration"
+                                    class="object-contain max-w-full aspect-[1.25] w-[243px]" />
+                                <h2 class="mt-12 text-2xl max-md:mt-10">Parallelogram</h2>
+                                <div class="flex gap-2 mt-2.5 max-w-full">
+                                    Area (A) = b <span class="text-neutral-600 font-extralight">X</span>h
+                                </div>
+                                <div class="flex gap-2.5 mt-6 max-w-full whitespace-nowrap w-[269px]">
+
+                                    <div>
+                                        <label for="base" class="sr-only">Base length in cm</label>
+                                        <input type="number" id="base"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Base length" placeholder="b" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+                                    <div>
+                                        <label for="height" class="sr-only">Height in cm</label>
+                                        <input type="number" id="height"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Height" placeholder="h" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+
+                                </div>
+                                <button type="submit"
+                                    class="self-stretch px-16 py-4 mt-12 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5 max-md:mt-10">
+                                    Calculate
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- area calculation container -->
+                    <div>
+
+                    </div>
+                </div>
+                <!-- card-4 Rhombus-->
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <div class="flex flex-col w-full max-md:ml-0 max-md:w-full">
+                            <form
+                                class="flex flex-col items-center px-11 py-12 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
+                                <img loading="lazy" src="Assets/images/rhombus.png" alt="Triangle shape illustration"
+                                    class="object-contain max-w-full aspect-[1.25] w-[243px]" />
+                                <h2 class="mt-12 text-2xl max-md:mt-10">Rhombus</h2>
+                                <div class="flex gap-2 mt-2.5 max-w-full">
+                                    Area (A) = 0.5 <span
+                                        class="text-neutral-600 font-extralight">X</span>d<sub>1</sub><span
+                                        class="text-neutral-600 font-extralight">X</span>d<sub>2</sub>
+                                </div>
+                                <div class="flex gap-2.5 mt-6 max-w-full whitespace-nowrap w-[269px]">
+
+                                    <div>
+                                        <label for="base" class="sr-only">Base length in cm</label>
+                                        <input type="number" id="base"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Base length" placeholder="d1" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+                                    <div>
+                                        <label for="height" class="sr-only">Height in cm</label>
+                                        <input type="number" id="height"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Height" placeholder="d2" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+
+                                </div>
+                                <button type="submit"
+                                    class="self-stretch px-16 py-4 mt-12 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5 max-md:mt-10">
+                                    Calculate
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- area calculation container -->
+                    <div>
+
+                    </div>
+                </div>
+                <!-- card-5 Pentagon-->
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <div class="flex flex-col w-full max-md:ml-0 max-md:w-full">
+                            <form
+                                class="flex flex-col items-center px-11 py-12 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
+                                <img loading="lazy" src="Assets/images/pentagon.png" alt="Triangle shape illustration"
+                                    class="object-contain max-w-full aspect-[1.25] w-[243px]" />
+                                <h2 class="mt-12 text-2xl max-md:mt-10">Pentagon</h2>
+                                <div class="flex gap-2 mt-2.5 max-w-full">
+                                    Area (A) = 0.5 <span class="text-neutral-600 font-extralight">X</span>p <span
+                                        class="text-neutral-600 font-extralight">X</span>b
+                                </div>
+                                <div class="flex gap-2.5 mt-6 max-w-full whitespace-nowrap w-[269px]">
+
+                                    <div>
+                                        <label for="base" class="sr-only">Base length in cm</label>
+                                        <input type="number" id="base"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Base length" placeholder="p" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+                                    <div>
+                                        <label for="height" class="sr-only">Height in cm</label>
+                                        <input type="number" id="height"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Height" placeholder="b" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+
+                                </div>
+                                <button type="submit"
+                                    class="self-stretch px-16 py-4 mt-12 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5 max-md:mt-10">
+                                    Calculate
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- area calculation container -->
+                    <div>
+
+                    </div>
+                </div>
+                <!-- card-6 Ellipse-->
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <div class="flex flex-col w-full max-md:ml-0 max-md:w-full">
+                            <form
+                                class="flex flex-col items-center px-11 py-12 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
+                                <img loading="lazy" src="Assets/images/ellipse.png" alt="Triangle shape illustration"
+                                    class="object-contain max-w-full aspect-[1.25] w-[243px]" />
+                                <h2 class="mt-12 text-2xl max-md:mt-10">Ellipse</h2>
+                                <div class="flex gap-2 mt-2.5 max-w-full">
+                                    Area (A) = πab
+                                </div>
+                                <div class="flex gap-2.5 mt-6 max-w-full whitespace-nowrap w-[269px]">
+
+                                    <div>
+                                        <label for="base" class="sr-only">Base length in cm</label>
+                                        <input type="number" id="base"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Base length" placeholder="a" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+                                    <div>
+                                        <label for="height" class="sr-only">Height in cm</label>
+                                        <input type="number" id="height"
+                                            class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                                            aria-label="Height" placeholder="b" />
+                                        <span class="my-auto">cm</span>
+                                    </div>
+
+                                </div>
+                                <button type="submit"
+                                    class="self-stretch px-16 py-4 mt-12 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5 max-md:mt-10">
+                                    Calculate
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- area calculation container -->
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Area Calculation container -->
+            <div class="flex justify-center items-start">
+                <h1
+                    class="text-2xl border-b-2 border-solid border-neutral-950 border-opacity-80 text-center font-bold px-4 opacity-80">
+                    Area Calculation
+                </h1>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
