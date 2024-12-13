@@ -8,9 +8,18 @@ function inputValueOfId(inputId) {
 function setInnerTextById(elementId, areaValue, name) {
   const areaDisplay = document.getElementById(elementId);
   const areaDisplayList = document.getElementById("area_calc_list");
-  areaDisplay.innerHTML = "Area (A) = " + areaValue + "cm<sup>2</sup>";
-  areaDisplayList.innerHTML +=
-    "<p>" + name + " Area (A) = " + areaValue + "cm<sup>2</sup></p>";
+  if (isNaN(areaValue)) {
+    areaDisplay.innerHTML =
+      "<p class='text-red-700'>Please enter a valid number.</p>";
+
+    areaDisplayList.innerHTML +=
+      "<p class='text-red-700'>Please enter a valid number in "+ name +".</p>";
+  } else {
+    areaDisplay.innerHTML = "Area (A) = " + areaValue + "cm<sup>2</sup>";
+
+    areaDisplayList.innerHTML +=
+      "<p>" + name + " Area (A) = " + areaValue + "cm<sup>2</sup></p>";
+  }
 }
 
 /* Triangle function */
