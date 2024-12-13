@@ -1,308 +1,445 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GEOMETRY-GENIUS</title>
     <!-- daisyui & tailwindcss -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body class="p-4">
+  <body class="p-4">
     <header>
-        <div
-            class="flex flex-wrap gap-5 justify-between px-12 py-5 font-bold rounded-lg bg-sky-600 bg-opacity-10 max-md:px-5 max-md:max-w-full">
-            <div class="flex flex-col ">
-                <h1 class="text-3xl xl:text-5xl text-neutral-900 max-md:text-2xl">
-                    Interactive
-                </h1>
-                <span class="lg:text-lg xl:text-3xl font-medium tracking-widest text-neutral-900 text-opacity-80">
-                    Geometry Genius
-                </span>
-            </div>
-            <button class="px-10 py-2.5 my-auto text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
-                aria-label="Open Blog">
-                Blog
-            </button>
+      <div
+        class="flex flex-wrap gap-5 justify-between px-12 py-5 font-bold rounded-lg bg-sky-600 bg-opacity-10 max-md:px-5 max-md:max-w-full"
+      >
+        <div class="flex flex-col">
+          <h1 class="text-3xl xl:text-5xl text-neutral-900 max-md:text-2xl">
+            Interactive
+          </h1>
+          <span
+            class="lg:text-lg xl:text-3xl font-medium tracking-widest text-neutral-900 text-opacity-80"
+          >
+            Geometry Genius
+          </span>
         </div>
+        <button
+          class="px-10 py-2.5 my-auto text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+          aria-label="Open Blog"
+        >
+          Blog
+        </button>
+      </div>
     </header>
     <main>
-        <!-- main content continer -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-12 max-md:mt-10">
-            <!-- shape card container -->
-            <div class="lg:col-span-3 max-md:grid-cols-2 max-sm:grid-cols-1 grid grid-cols-3 gap-4">
-                <!-- card-1 Triangle-->
-                <div
-                    class="card gap-4 grid items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
-                    <div class=" flex justify-center items-center">
-                        <img loading=" lazy" src="Assets/images/triangle.png" alt="Triangle shape illustration"
-                            class="object-contain max-w-full aspect-[1.25] ">
-                    </div>
-                    <div class="flex flex-col items-center justify-center gap-4 ">
-                        <h1 class="text-2xl">
-                            Triangle
-                        </h1>
-                        <p>
-                            Area (A) = 0.5 <span class="text-neutral-600 font-extralight">X</span> b <span class="text-neutral-600 font-extralight">X</span> h
-                        </p>
-                    </div>
-                    <div>
-                        <div action="" class="flex flex-col justify-center items-center gap-4">
-                            <div class="flex gap-2.5 max-w-full whitespace-nowrap">
-                                <div>
-                                    <label for="base" class="sr-only">Base length in cm</label>
-                                    <input type="number" id="triangle_base"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Base length" placeholder="b" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                                <div>
-                                    <label for="height" class="sr-only">Height in cm</label>
-                                    <input type="number" id="triangle_height"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Height" placeholder="h" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                            </div>
-                            <div id="triangle_area">
-                                
-                            </div>
-                            <button type="submit" onclick="calculateAreaTriangle()"
-                                class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5">
-                                Calculate
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- card-2 Rectangle-->
-                <div
-                    class="card gap-4 grid   items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
-                    <div class=" flex justify-center items-center">
-                        <img loading=" lazy" src="Assets/images/rectangle.png" alt="Rectangle shape illustration"
-                            class="object-contain max-w-full aspect-[1.25] ">
-                    </div>
-                    <div class="flex flex-col items-center justify-center gap-4 ">
-                        <h1 class="text-2xl">
-                            Rectangle
-                        </h1>
-                        <p>
-                            Area (A) = W <span class="text-neutral-600 font-extralight">X</span> l
-                        </p>
-                    </div>
-                    <div>
-                        <form action="" class="flex flex-col justify-center items-center gap-4">
-                            <div class="flex gap-2.5 max-w-full whitespace-nowrap">
-                                <div>
-                                    <label for="base" class="sr-only">Base length in cm</label>
-                                    <input type="number" id="base"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Base length" placeholder="W" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                                <div>
-                                    <label for="height" class="sr-only">Height in cm</label>
-                                    <input type="number" id="height"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Height" placeholder="l" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                            </div>
-                            <button type="submit"
-                                class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5">
-                                Calculate
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- card-3 Parallelogram-->
-                <div
-                    class="card gap-4 grid   items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
-                    <div class=" flex justify-center items-center">
-                        <img loading=" lazy" src="Assets/images/parallelogram.png"
-                            alt="Parallelogram shape illustration" class="object-contain max-w-full aspect-[1.25] ">
-                    </div>
-                    <div class="flex flex-col items-center justify-center gap-4 ">
-                        <h1 class="text-2xl">
-                            Parallelogram
-                        </h1>
-                        <p>
-                            Area (A) = b <span class="text-neutral-600 font-extralight">X</span> h
-                        </p>
-                    </div>
-                    <div>
-                        <form action="" class="flex flex-col justify-center items-center gap-4">
-                            <div class="flex gap-2.5 max-w-full whitespace-nowrap">
-                                <div>
-                                    <label for="base" class="sr-only">Base length in cm</label>
-                                    <input type="number" id="base"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Base length" placeholder="b" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                                <div>
-                                    <label for="height" class="sr-only">Height in cm</label>
-                                    <input type="number" id="height"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Height" placeholder="h" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                            </div>
-                            <button type="submit"
-                                class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5">
-                                Calculate
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- card-4 Rhombus-->
-                <div
-                    class="card  gap-4 grid   items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
-                    <div class=" flex justify-center items-center">
-                        <img loading=" lazy" src="Assets/images/rhombus.png" alt=" Rhombus shape illustration"
-                            class="object-contain max-w-full aspect-[1.25] ">
-                    </div>
-                    <div class="flex flex-col items-center justify-center gap-4 ">
-                        <h1 class="text-2xl">
-                            Rhombus
-                        </h1>
-                        <p>
-                            Area (A) = 0.5 <span class="text-neutral-600 font-extralight">X</span> d<sub>1</sub> <span
-                                class="text-neutral-600 font-extralight">X</span> d<sub>2</sub>
-                        </p>
-                    </div>
-                    <div>
-                        <form action="" class="flex flex-col justify-center items-center gap-4">
-                            <div class="flex gap-2.5 max-w-full whitespace-nowrap">
-                                <div>
-                                    <label for="base" class="sr-only">Base length in cm</label>
-                                    <input type="number" id="base"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Base length" placeholder="d1" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                                <div>
-                                    <label for="height" class="sr-only">Height in cm</label>
-                                    <input type="number" id="height"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Height" placeholder="d2" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                            </div>
-                            <button type="submit"
-                                class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5">
-                                Calculate
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- card-5 Pentagon-->
-                <div
-                    class="card  gap-4 grid   items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
-                    <div class=" flex justify-center items-center">
-                        <img loading="lazy" src="Assets/images/pentagon.png" alt="Pentagon shape illustration"
-                            class="object-contain max-w-full aspect-[1.25] ">
-                    </div>
-                    <div class="flex flex-col items-center justify-center gap-4 ">
-                        <h1 class="text-2xl">
-                            Pentagon
-                        </h1>
-                        <p>
-                            Area (A) = 0.5 <span class="text-neutral-600 font-extralight">X</span> p <span
-                                class="text-neutral-600 font-extralight">X</span> b
-                        </p>
-                    </div>
-                    <div>
-                        <form action="" class="flex flex-col justify-center items-center gap-4">
-                            <div class="flex gap-2.5 max-w-full whitespace-nowrap">
-                                <div>
-                                    <label for="base" class="sr-only">Base length in cm</label>
-                                    <input type="number" id="base"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Base length" placeholder="p" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                                <div>
-                                    <label for="height" class="sr-only">Height in cm</label>
-                                    <input type="number" id="height"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Height" placeholder="b" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                            </div>
-                            <button type="submit"
-                                class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5">
-                                Calculate
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- card-6 Ellipse-->
-                <div
-                    class="card  gap-4 grid   items-center px-8 py-4  w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full">
-                    <div class=" flex justify-center items-center">
-                        <img loading=" lazy" src="Assets/images/ellipse.png" alt="Ellipse shape illustration"
-                            class="object-contain max-w-full aspect-[1.25] ">
-                    </div>
-                    <div class="flex flex-col items-center justify-center gap-4 ">
-                        <h1 class="text-2xl">
-                            Ellipse
-                        </h1>
-                        <p>
-                            Area (A) = πab
-                        </p>
-                    </div>
-                    <div>
-                        <form action="" class="flex flex-col justify-center items-center gap-4">
-                            <div class="flex gap-2.5 max-w-full whitespace-nowrap">
-                                <div>
-                                    <label for="base" class="sr-only">Base length in cm</label>
-                                    <input type="number" id="base"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Base length" placeholder="a" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                                <div>
-                                    <label for="height" class="sr-only">Height in cm</label>
-                                    <input type="number" id="height"
-                                        class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
-                                        aria-label="Height" placeholder="b" />
-                                    <span class="my-auto">cm</span>
-                                </div>
-                            </div>
-                            <button type="submit"
-                                class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5">
-                                Calculate
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
+      <!-- main content continer -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-12 max-md:mt-10">
+        <!-- shape card container -->
+        <div
+          class="lg:col-span-3 max-md:grid-cols-2 max-sm:grid-cols-1 grid grid-cols-3 gap-4"
+        >
+          <!-- card-1 Triangle-->
+          <div
+            class="card gap-4 grid items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                loading=" lazy"
+                src="Assets/images/triangle.png"
+                alt="Triangle shape illustration"
+                class="object-contain max-w-full aspect-[1.25]"
+              />
             </div>
-            <!-- Area Calculation container -->
-            <div class="flex justify-center items-start">
-                <h1
-                    class="text-2xl border-b-2 border-solid border-neutral-950 border-opacity-80 text-center font-bold px-4 opacity-80">
-                    Area Calculation
-                </h1>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h1 class="text-2xl">Triangle</h1>
+              <p>
+                Area (A) = 0.5
+                <span class="text-neutral-600 font-extralight">X</span> b
+                <span class="text-neutral-600 font-extralight">X</span> h
+              </p>
             </div>
+            <div>
+              <div
+                action=""
+                class="flex flex-col justify-center items-center gap-4"
+              >
+                <div class="flex gap-2.5 max-w-full whitespace-nowrap">
+                  <div>
+                    <label for="base" class="sr-only">Base length in cm</label>
+                    <input
+                      type="number"
+                      id="triangle_base"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Base length"
+                      placeholder="b"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                  <div>
+                    <label for="triangle_height" class="sr-only"
+                      >Height in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="triangle_height"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Height"
+                      placeholder="h"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                </div>
+                <div id="triangle_area"></div>
+                <button
+                  type="submit"
+                  onclick="calculateAreaTriangle()"
+                  class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-2 Rectangle-->
+          <div
+            class="card gap-4 grid items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                loading=" lazy"
+                src="Assets/images/rectangle.png"
+                alt="Rectangle shape illustration"
+                class="object-contain max-w-full aspect-[1.25]"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h1 class="text-2xl">Rectangle</h1>
+              <p>
+                Area (A) = W
+                <span class="text-neutral-600 font-extralight">X</span> l
+              </p>
+            </div>
+            <div>
+              <div
+                action=""
+                class="flex flex-col justify-center items-center gap-4"
+              >
+                <div class="flex gap-2.5 max-w-full whitespace-nowrap">
+                  <div>
+                    <label for="rectangle_width" class="sr-only"
+                      >Width in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="rectangle_width"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Base length"
+                      placeholder="W"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                  <div>
+                    <label for="rectangle_length" class="sr-only"
+                      >Length in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="rectangle_length"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Height"
+                      placeholder="l"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                </div>
+                <div id="rectangle_area"></div>
+                <button
+                  type="submit"
+                  onclick="calculateAreaRectangle()"
+                  class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-3 Parallelogram-->
+          <div
+            class="card gap-4 grid items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                loading=" lazy"
+                src="Assets/images/parallelogram.png"
+                alt="Parallelogram shape illustration"
+                class="object-contain max-w-full aspect-[1.25]"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h1 class="text-2xl">Parallelogram</h1>
+              <p>
+                Area (A) = b
+                <span class="text-neutral-600 font-extralight">X</span> h
+              </p>
+            </div>
+            <div>
+              <div
+                action=""
+                class="flex flex-col justify-center items-center gap-4"
+              >
+                <div class="flex gap-2.5 max-w-full whitespace-nowrap">
+                  <div>
+                    <label for="parallelogram_base" class="sr-only"
+                      >Base length in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="parallelogram_base"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Base length"
+                      placeholder="b"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                  <div>
+                    <label for="parallelogram_height" class="sr-only"
+                      >Height in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="parallelogram_height"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Height"
+                      placeholder="h"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                </div>
+                <div id="parallelogram_area"></div>
+                <button
+                  type="submit"
+                  onclick="calculateAreaParallelogram()"
+                  class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-4 Rhombus-->
+          <div
+            class="card gap-4 grid items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                loading=" lazy"
+                src="Assets/images/rhombus.png"
+                alt=" Rhombus shape illustration"
+                class="object-contain max-w-full aspect-[1.25]"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h1 class="text-2xl">Rhombus</h1>
+              <p>
+                Area (A) = 0.5
+                <span class="text-neutral-600 font-extralight">X</span> d<sub
+                  >1</sub
+                >
+                <span class="text-neutral-600 font-extralight">X</span> d<sub
+                  >2</sub
+                >
+              </p>
+            </div>
+            <div>
+              <div
+                action=""
+                class="flex flex-col justify-center items-center gap-4"
+              >
+                <div class="flex gap-2.5 max-w-full whitespace-nowrap">
+                  <div>
+                    <label for="rhombus_d1" class="sr-only"
+                      >Diagonal-2 in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="rhombus_d1"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Base length"
+                      placeholder="d1"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                  <div>
+                    <label for="rhombus_d2" class="sr-only"
+                      >Diagonal-1 in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="rhombus_d2"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Height"
+                      placeholder="d2"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                </div>
+                <div id="rhombus_area"></div>
+                <button
+                  type="submit"
+                  onclick="calculateAreaRhombus()"
+                  class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-5 Pentagon-->
+          <div
+            class="card gap-4 grid items-center px-8 py-4 mx-auto w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                loading="lazy"
+                src="Assets/images/pentagon.png"
+                alt="Pentagon shape illustration"
+                class="object-contain max-w-full aspect-[1.25]"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h1 class="text-2xl">Pentagon</h1>
+              <p>
+                Area (A) = 0.5
+                <span class="text-neutral-600 font-extralight">X</span> p
+                <span class="text-neutral-600 font-extralight">X</span> a
+              </p>
+            </div>
+            <div>
+              <div
+                action=""
+                class="flex flex-col justify-center items-center gap-4"
+              >
+                <div class="flex gap-2.5 max-w-full whitespace-nowrap">
+                  <div>
+                    <label for="pentagon_perimeter" class="sr-only"
+                      >perimeter length in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="pentagon_perimeter"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Base length"
+                      placeholder="p"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                  <div>
+                    <label for="height" class="sr-only">apothem in cm</label>
+                    <input
+                      type="number"
+                      id="pentagon_apothem"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Height"
+                      placeholder="b"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                </div>
+                <div id="pentagon_area"></div>
+                <button
+                  type="submit"
+                  onclick="calculateAreaPentagon()"
+                  class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-6 Ellipse-->
+          <div
+            class="card gap-4 grid items-center px-8 py-4 w-full text-base font-bold text-center bg-white rounded-lg border border-solid border-neutral-900 border-opacity-10 text-neutral-700 max-md:px-5 max-md:max-w-full"
+          >
+            <div class="flex justify-center items-center">
+              <img
+                loading=" lazy"
+                src="Assets/images/ellipse.png"
+                alt="Ellipse shape illustration"
+                class="object-contain max-w-full aspect-[1.25]"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center gap-4">
+              <h1 class="text-2xl">Ellipse</h1>
+              <p>Area (A) = πab</p>
+            </div>
+            <div>
+              <div
+                action=""
+                class="flex flex-col justify-center items-center gap-4"
+              >
+                <div class="flex gap-2.5 max-w-full whitespace-nowrap">
+                  <div>
+                    <label for="ellipse_sr" class="sr-only"
+                      >shortest radius in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="ellipse_sr"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Base length"
+                      placeholder="a"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                  <div>
+                    <label for="ellipse_lr" class="sr-only"
+                      >longest radius in cm</label
+                    >
+                    <input
+                      type="number"
+                      id="ellipse_lr"
+                      class="w-3/4 flex-1 px-3 py-2 rounded bg-zinc-100 max-md:pr-5"
+                      aria-label="Height"
+                      placeholder="b"
+                    />
+                    <span class="my-auto">cm</span>
+                  </div>
+                </div>
+                <div id="ellipse_area"></div>
+                <button
+                  type="submit"
+                  onclick="calculateAreaEllipse()"
+                  class="self-stretch px-4 py-4 text-xl text-white whitespace-nowrap bg-sky-600 rounded-lg max-md:px-5"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Area Calculation container -->
+        <div class="flex justify-center items-start">
+          <h1
+            class="text-2xl border-b-2 border-solid border-neutral-950 border-opacity-80 text-center font-bold px-4 opacity-80"
+          >
+            Area Calculation
+          </h1>
+        </div>
+      </div>
     </main>
-    <footer>
-
-    </footer>
-
+    <footer></footer>
 
     <!-- js files -->
     <script src="Assets/JS/custom.js"></script>
-
-
-</body>
-
+  </body>
 </html>
